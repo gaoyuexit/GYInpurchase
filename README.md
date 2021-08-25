@@ -11,7 +11,7 @@
 let productIdentifiers: Set<String> = ["a", "b", "c"]
 
 Inpurchase.default.start(productIdentifiers: productIdentifiers, successBlock: { () -> Order in
-    return (productIdentifiers: "a", applicationUsername: "该用户的id或改用户的唯一标识符")
+    return (productIdentifiers: "a", applicationUsername: "该用户的id或用户的唯一标识符")
 }, receiptBlock: { (receipt, transaction, queue) in
     //交易成功返回了凭证
     let data = InpurchaseAPIData(accountID: transaction.payment.applicationUsername,
